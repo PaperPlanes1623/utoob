@@ -13,9 +13,18 @@ class CommentsController < ApplicationController
   def create
     @comment = @movie.comments.new(comment_params)
     if @comment.save
-      redirect_to @comment
+      redirect_to new_movie_comment_path(@movie)
     else
       render :new
+    end
+  end
+
+  def update
+
+    if @comment.update(comment_params)
+      redirect_to new_movie_comment_path(@movie)
+    else
+      render :edit
     end
   end
 

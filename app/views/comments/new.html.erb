@@ -1,2 +1,19 @@
-<h1>Comments#new</h1>
-<p>Find me in app/views/comments/new.html.erb</p>
+<h1>All Comments For <%= @movie.title%></h1>
+<% @movie.comments.each do |comment|%>
+  <%= comment.body %>
+  <ul>
+ <li> <%= link_to 'Delete Comment' %></li>
+  </ul>
+  
+
+
+<h2>Add Comment</h2>
+<%= form_for [@movie, @comment] do |f| %>
+
+  <%= f.label :body%>
+  <%= f.text_area :body%>
+
+  <%= f.submit%>
+<% end %>
+<% end %>
+

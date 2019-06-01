@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+ @import "semantic-ui";
+ @import "comments.scss";
+ @import "movies.scss";
+ @import "users.scss";
+
+ .font {
+  color: red;
+  text-align: center;
+  background-color: lightcyan;
+}
+
+ul {
+  color: red;
+}
+
+body {
+  background-color: lightcyan;
+}
+
