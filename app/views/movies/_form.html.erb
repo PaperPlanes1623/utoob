@@ -1,0 +1,12 @@
+<h1><%= @movie.id ? 'Edit Movie' : 'Create Movie' %></h1>
+<%= form_for(@movie) do |f| %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title, required: true, autofocus: true %>
+    <%= f.text_field :duration, required: true %>
+    <%= f.text_field :genre, required: true %>
+    <%= f.text_field :description, required: true %>
+    <%= f.text_field :trailer, required: true %>
+    <%= f.submit %>
+  </div>
+<% end %>
