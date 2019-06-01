@@ -1,3 +1,4 @@
+<div class = "font">
 <h1>Login</h1>
 <%= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
 
@@ -5,4 +6,5 @@
   <p> Password:</br> <%= f.password_field :password%></p>
   <%= f.submit :Signup %>
 <% end %>
+</div>
 

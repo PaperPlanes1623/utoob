@@ -1,5 +1,6 @@
+<div class = "font">
 <h1>Welcome <%=@user.email%> </h1>
 <ul>
-<li><%= link_to 'Movie List', movies_path %></li>
-<li><%= link_to 'your comments'%></li>
+<li><%= link_to 'Movie List', movies_path(@movie) %></li>
 </ul>
+</div>
