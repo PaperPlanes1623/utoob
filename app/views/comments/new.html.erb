@@ -1,3 +1,5 @@
+
+<div class = "font">
 <h1>All Comments For <%= @movie.title%></h1>
 <% @movie.comments.each do |comment|%>
   <%= comment.body %>
@@ -12,8 +14,11 @@
 
   <%= f.label :body%>
   <%= f.text_area :body%>
+  </br>
 
   <%= f.submit%>
 <% end %>
 <% end %>
+</div>
+
 
