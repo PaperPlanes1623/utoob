@@ -1,5 +1,4 @@
 <h1>All Movies</h1>
-
-<% @movies.each do |movie| %>
-<p><%= link_to movie.title, movie_path %></p>
+<% @movies.each do |movie|%>
+  <p><%= link_to movie.title, movie_comments_path(movie) %><p>
 <% end %>
